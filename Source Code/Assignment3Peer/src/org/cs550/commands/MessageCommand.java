@@ -1,0 +1,19 @@
+package org.cs550.commands;
+
+public enum MessageCommand {
+	SERVER_RESP_REGISTRY_SUCCESS_MSG(
+			"REGISTERED ! NOW YOU CAN SEARCH IN INDEX SERVER"), SERVER_RESP_CONN_ESTABLISHED(
+			"YOUR CONNECTION IS EDTABLISHED. PLEASE REGISTER"), SERVER_RESP_REGISTRY_NOT_SUCCESS(
+			"THERE IS SOME PROBLEM WHILE REGISTING. PLEASE TRY AGIAN"),P2P_RESP_CONN_ESTABLISHED(
+					"YOUR CONNECTION IS EDTABLISHED. PLEASE REGISTER"),P2P_FILE_NOT_FOUND_MSG("FILE NOT FOUND!"),UNKNOWN_COMMAND_MSG("Unknown Comand. Try Again!");
+	private String message;
+
+	private MessageCommand(String msg) {
+		this.message = msg;
+	}
+
+	public String getMessage() {
+		return this.message;
+	}
+
+}
